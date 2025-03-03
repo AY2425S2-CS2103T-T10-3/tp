@@ -38,9 +38,9 @@
     },
     {
       "src": "DeveloperGuide.md",
-      "title": "Developer Guide",
+      "title": "Better Call TA",
       "headings": {
-        "ab-3-developer-guide": "AB-3 Developer Guide",
+        "better-call-ta-developer-guide": "Better Call TA Developer Guide",
         "acknowledgements": "Acknowledgements",
         "setting-up-getting-started": "Setting up, getting started",
         "design": "Design",
