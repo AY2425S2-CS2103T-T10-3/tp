@@ -8,7 +8,7 @@
         "about-us": "About Us",
         "project-team": "Project team",
         "billy-andina": "Billy Andina",
-        "jane-doe": "Jane Doe",
+        "nguyen-nhat-minh": "Nguyen Nhat Minh",
         "kwan-fai-yew": "Kwan Fai Yew",
         "vikram-goyal": "Vikram Goyal",
         "zayd-mahmud": "Zayd Mahmud"
@@ -146,6 +146,14 @@
     {
       "src": "team/kwanfaiyew.md",
       "title": "Fai Yew's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/minh.md",
+      "title": "John Doe's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
