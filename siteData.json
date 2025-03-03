@@ -7,7 +7,7 @@
       "headings": {
         "about-us": "About Us",
         "project-team": "Project team",
-        "john-doe": "John Doe",
+        "billy-andina": "Billy Andina",
         "jane-doe": "Jane Doe",
         "kwan-fai-yew": "Kwan Fai Yew",
         "vikram-goyal": "Vikram Goyal",
@@ -132,6 +132,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/billyandina.md",
+      "title": "Billy Andina's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
       "headingKeywords": {}
     },
