@@ -109,6 +109,7 @@
       "headings": {
         "ab-3-user-guide": "AB-3 User Guide",
         "quick-start": "Quick start",
+        "person": "Person",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
         "adding-a-person-add": "Adding a person: add",
@@ -123,7 +124,8 @@
         "archiving-data-files-coming-in-v2-0": "Archiving data files [coming in v2.0]",
         "faq": "FAQ",
         "known-issues": "Known issues",
-        "command-summary": "Command summary"
+        "command-summary": "Command summary",
+        "glossary": "Glossary"
       },
       "headingKeywords": {}
     },
