@@ -112,7 +112,7 @@
         "person": "Person",
         "properties": "Properties",
         "features": "Features",
-        "commands-overview": "Commands Overview",
+        "command-syntax-notes": "Command Syntax Notes",
         "viewing-help-help": "Viewing Help: help",
         "adding-a-person-add": "Adding a Person: add",
         "listing-all-persons-list": "Listing All Persons: list",
