@@ -105,6 +105,11 @@
       "headings": {
         "better-call-ta-user-guide": "Better Call TA User Guide",
         "table-of-contents": "Table of Contents",
+        "overview": "Overview",
+        "target-audience": "Target audience",
+        "value-proposition": "Value proposition",
+        "assumptions": "Assumptions",
+        "notations": "Notations",
         "quick-start": "Quick start",
         "person": "Person",
         "properties": "Properties",
