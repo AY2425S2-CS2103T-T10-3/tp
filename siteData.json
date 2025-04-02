@@ -125,6 +125,7 @@
         "loading-contact-data-file-load": "Loading Contact Data: file /load",
         "listing-save-files-file-list": "Listing Save Files: file /list",
         "clearing-all-entries-clear": "Clearing All Entries: clear",
+        "resetting-all-attendance-and-participation-records-resetrecords": "Resetting All Attendance and Participation Records: resetRecords",
         "exiting-the-program-exit": "Exiting the Program: exit",
         "faq": "FAQ",
         "known-issues": "Known issues",
