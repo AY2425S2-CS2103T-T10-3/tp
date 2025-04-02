@@ -5,17 +5,22 @@ skinparam arrowColor MODEL_COLOR
 skinparam classBackgroundColor MODEL_COLOR
 
 AddressBook *-right-> "1" UniquePersonList
-AddressBook *-right-> "1" UniqueTagList
-UniqueTagList -[hidden]down- UniquePersonList
-UniqueTagList -[hidden]down- UniquePersonList
 
-UniqueTagList -right-> "*" Tag
+
+
 UniquePersonList -right-> Person
 
-Person -up-> "*" Tag
 
-Person *--> Name
-Person *--> Phone
-Person *--> Email
-Person *--> Address
+Person *---> Name
+Person *---> Course
+Person *---> Email
+Person *---> Id
+Person *---> Grade
+Person *---> Attendance
+Attendance -[dotted]-> "1" AttendanceStatus
+Person *---> Participation
+Participation -[dotted]-> "1" ParticipationStatus
+Person *---> Note
+Person *---> Phone
+Person -[dotted]-> NameContainsKeywordPredicate
 @enduml
