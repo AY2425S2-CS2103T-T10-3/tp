@@ -120,6 +120,7 @@
         "listing-all-persons-list": "Listing All Persons: list",
         "editing-a-person-edit": "Editing a Person: edit",
         "locating-persons-by-name-find": "Locating Persons by Name: find",
+        "sorting-your-list-sort": "Sorting Your List: sort",
         "deleting-a-person-delete": "Deleting a Person: delete",
         "saving-contact-data-file-save": "Saving Contact Data: file /save",
         "loading-contact-data-file-load": "Loading Contact Data: file /load",
