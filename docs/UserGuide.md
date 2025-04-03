@@ -6,7 +6,7 @@
 ## Table of Contents
 1. [Overview](#overview)
 1. [Quick start](#quick-start)
-1. [Person](#person)
+1. [Student](#student)
    - [ID - Unique student identifier](#-id---unique-student-identifier)
    - [Name - Student's name](#name---your-students-name)
    - [Phone - Student's phone number](#-phone---students-phone-number)
@@ -90,24 +90,31 @@ Teaching Assistants (TA) who can type fast, preferring typing over mouse/voice c
 Do refer to the [Features](#features) below for details of each command!
 
 --------------------------------------------------------------------------------------------------------------------
-## Person
+## Student
 
-This section covers a `Person`, which encapsulates a student's contact details in BetterCallTA.
+This section covers the `Person` field used in BetterCallTA, which encapsulates a student's contact details in BetterCallTA.
 
-> ![Person descriptor](images/person.png)
+> ![Student descriptor](images/person.png)
+
+---
+## 🧑‍🎓 Student
+
+This section covers the `Person` field used in BetterCallTA, which encapsulates a student's contact details in BetterCallTA.
+
+> ![Student descriptor](images/person.png)
 
 ---
 ### Properties
 
-   - [ID - Unique student identifier](#-id---unique-student-identifier)
+   - [🆔 ID - Unique student identifier](#-🆔-id---unique-student-identifier)
    - [Name - Student's name](#name---your-students-name)
-   - [Phone - Student's phone number](#-phone---students-phone-number)
-   - [Email - Student's email address](#-email---students-email-address)
-   - [Course - NUS course code](#-course---nus-course-code)
-   - [Attendance - Student's class participation status](#-attendance---students-class-participation-status)
-   - [Participation - Student's engagement level](#-participation---students-engagement-level)
-   - [Grade - Predicted grade](#grade---the-predicted-grade-of-your-student-based-on-their-previous-graded-assignments)
-   - [Notes - Additional details](#notes---additional-details-that-you-may-want-to-keep-about-individual-students)
+   - [📞 Phone - Student's phone number](#-📞-phone---students-phone-number)
+   - [📧 Email - Student's email address](#-📧-email---students-email-address)
+   - [🎓 Course - NUS course code](#-🎓-course---nus-course-code)
+   - [✅ Attendance - Student's class participation status](#-✅-attendance---students-class-participation-status)
+   - [🗣️ Participation - Student's engagement level](#-🗣️-participation---students-engagement-level)
+   - [💯 Grade - Predicted grade](#💯-grade---the-predicted-grade-of-your-student-based-on-their-previous-graded-assignments)
+   - [📝 Notes - Additional details](#-📝-notes---additional-details-that-you-may-want-to-keep-about-individual-students)
 
 ---
 
@@ -118,12 +125,14 @@ This section covers a `Person`, which encapsulates a student's contact details i
 <1 x (A/U/HT/NT)> + 7 digits + <1 x (A/B/E/H/J/L/M/N/R/U/W/X/Y)>
 ```
 
-> **📌 ID Format Rules**
-> Follows NUS Student ID format:
-> 1. Must start with `A`, `U`, `HT`, or `NT`
-> 2. Starting letters must be followed by **7 digits**
-> 3. Must end with one of:
->    `A, B, E, H, J, L, M, N, R, U, W, X, Y`
+<div style="background-color: #fde68a; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #000">
+    <b>📌 ID Format Rules</b> Follows NUS Student ID format:
+    <ol>
+      <li>Must start with <code>A</code>, <code>U</code>, <code>HT</code>, or <code>NT</code></li>
+      <li>Starting letters must be followed by <b>7 digits</b></li>
+      <li>Must end with one of: <code>A, B, E, H, J, L, M, N, R, U, W, X, Y</code></li>
+    </ol>
+</div><br>
 
 **Examples**:
 - `A0738475N`
@@ -133,16 +142,22 @@ This section covers a `Person`, which encapsulates a student's contact details i
 
 #### `Name` - Your student's name
 
-Duplicate names are allowed, as that is something that **can** happen!
+Multiple students with the same name are allowed, as long as they have a unique Student ID. 
 
 ---
 
 #### 📞 **`Phone`** - Student's phone number
 
-> **Phone Number Format Rules**:
-> 1. Can start with +
-> 1. Otherwise, must only contain numbers (0-9) or -
-> 1. Must be at least 7 digits long and no more than 15 digits long
+<div style="background-color: #fde68a; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #000">
+    <b>📌 Phone Number Format Rules</b>
+    
+    <ol>
+      <li>Can start with <code>+</code></li>
+      <li>Otherwise, must only contain numbers <code>(0-9)</code> or <code>-</code></li>
+      <li>Cannot contain consecutive hyphens</li>
+      <li>Must be at least 7 digits long and no more than 15 digits long</li>
+    </ol>
+</div><br>
 
 **Default**: `00000000`
 
@@ -154,23 +169,30 @@ Duplicate names are allowed, as that is something that **can** happen!
 
 #### 📧 **`Email`** - Student's email address
 
-> **Email Format Rules - Student's Email**
->
-> **Format**: `local-part@domain`
->
-> **Requirements**<br>
-> **Local-part**:
-> - Only alphanumeric characters (a-z, A-Z, 0-9)
-> - Cannot contain these special characters: `+`, `_`, `.`, `-`
-> - Cannot start or end with special characters
->
-> **Domain**:
-> - Must end with domain label of at least 2 characters
-> - Each label must:
->  - Start and end with alphanumeric characters
->  - Contain only alphanumerics and hyphens
+**Format**: `local-part@domain`
 
-**Default**: `studentname@u.nus.edu`
+<div style="background-color: #fde68a; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #000">
+    <b>📌 Email Format Rules</b>
+    
+    <b>Local-Part:</b>
+    <ul>
+      <li>Only alphanumeric characters <code>(a-z, A-Z, 0-9)</code></li>
+      <li>Cannot contain these special characters: <code>+</code>, <code>_</code>, <code>.</code>, <code>-</code></li>
+      <li>Cannot start or end with special characters</li>
+    </ul>
+
+    <b>Domain:</b>
+    <ul>
+      <li>Must end with domain label of at least 2 characters</li>
+      <li>Each label must:</li>
+      <ul>
+            <li>Start and end with alphanumeric characters</li>
+            <li>Contain only alphanumerics and hyphens</li>
+      </ul>
+    </ul>
+</div><br>
+
+**Default**: `example@u.nus.edu`
 
 **Valid Examples**:
 - `johndoe@u.nus.edu`
@@ -185,10 +207,15 @@ Duplicate names are allowed, as that is something that **can** happen!
 <(2/3) x (A-Z)> + 4 digits + <(0-2) x (A-Z)>
 ```
 
-> **Format Rules**:
-> 1. Must start with 2 or 3 letters
-> 2. Followed by exactly 4 digits
-> 3. May optionally end with up to 2 letters
+<div style="background-color: #fde68a; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #000">
+    <b>📌 Course Format Rules</b>
+    
+    <ol>
+      <li>Must start with 2 or 3 letters</li>
+      <li>Followed by exactly 4 digits</li>
+      <li>May optionally end with up to 2 letters</li>
+    </ol>
+</div><br>
 
 **Default**: `AAA0000AA`
 
@@ -207,10 +234,15 @@ Duplicate names are allowed, as that is something that **can** happen!
 | `ABSENT`      | Absent without valid reason          | Case-insensitive |
 | `EXCUSED`   | Absent with valid reason             | Case-insensitive |
 
-> **Format Rules**:
-> - Only the above status values are valid
-> - Matches must be exact (e.g., "Absent" not "Absent again")
-> - Input can be in any capitalization (e.g., "Present" or "PRESENT")
+<div style="background-color: #fde68a; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #000">
+    <b>📌 Attendance Format Rules</b>
+    
+    <ol>
+      <li>Only the above status values are valid</li>
+      <li>Matches must be exact (e.g., "Absent" not "Absent again")</li>
+      <li>Input can be in any capitalization (e.g., "Present" or "PRESENT")</li>
+    </ol>
+</div><br>
 
 **Default**: `UNMARKED`
 
@@ -226,10 +258,15 @@ Duplicate names are allowed, as that is something that **can** happen!
 | `POOR`      | Minimal or insufficient engagement   | Case-insensitive |
 | `NONE`      | No observable participation          | Case-insensitive |
 
-> **Format Rules**:
-> - Only the above status values are valid
-> - Matches must be exact (e.g., "Good" not "Good enough")
-> - Input can be in any capitalization (e.g., "Excellent" or "EXCELLENT")
+<div style="background-color: #fde68a; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #000">
+    <b>📌 Participation Format Rules</b>
+    
+    <ol>
+      <li>Only the above status values are valid</li>
+      <li>Matches must be exact (e.g., "Good" not "Good enough")</li>
+      <li>Input can be in any capitalization (e.g., "Excellent" or "EXCELLENT")</li>
+    </ol>
+</div><br>
 
 **Default**: `UNMARKED`
 
@@ -237,14 +274,20 @@ Duplicate names are allowed, as that is something that **can** happen!
 
 #### `Grade` - The predicted grade of your student based on their previous graded assignments
 
-> **Format Rules**
-> -  You can only enter an integer from `0` to `100` (inclusive), or `NA`.
+<div style="background-color: #fde68a; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #000">
+    <b>📌 Grade Format Rules</b>
+    
+    <ol>
+      <li>You can only enter an integer from <code>0</code> to <code>100</code> (inclusive), or <code>NA</code></li>
+    </ol>
+</div><br>
 
 ---
 
 #### `Notes` - Additional details that you may want to keep about individual students
 
 - You can attach any number of notes to each student.
+
 
 --------------------------------------------------------------------------------------------------------------------
 
