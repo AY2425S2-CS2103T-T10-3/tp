@@ -119,7 +119,7 @@
         "adding-a-student-add": "Adding a Student: add",
         "listing-all-students-list": "📜 Listing All Students: list",
         "editing-a-student-edit": "Editing a Student: edit",
-        "locating-students-by-name-find": "🔎 Locating Students by Name: find",
+        "locating-students-by-name-id-or-course-find": "🔎 Locating Students by Name, Id or Course: find",
         "sorting-your-list-sort": "🔀 Sorting Your List: sort",
         "deleting-a-person-delete": "🗑️ Deleting a Person: delete",
         "saving-contact-data-file-save": "💾 Saving Contact Data: file /save",
