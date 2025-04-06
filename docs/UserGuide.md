@@ -441,7 +441,7 @@ Clears all entries from the application 📇.
 clear
 ```
 
-If there are no students in BetterCallTA, an error message will be shown. 
+If there are no students in BetterCallTA, an error message will be shown.
 
 <div style="background-color: #dc3545; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #FFF">
     <b>Alert!</b><br><br>
@@ -552,6 +552,9 @@ file /save SAVE_FILE
 <div style="background-color: #dc3545; padding: 10px; border: 1px solid #000; border-radius: 5px; color: #FFF">
     <b>Alert!</b>
     <ul>
+      <li>
+        You do NOT need to specify the <code>.json</code> file extension as it will automatically be added by our application. If you attempt to include the file extension type <code>SAVE_FILE</code>, such as <code>save.pdf</code>, it will be saved as <code>save.pdf.json</code>. This is NOT a bug as <code>.</code> is a valid character that can be used in the filename of the save file.
+      </li>
       <li>If the save file contains illegal characters, such as <code>[, /, :, *,? ,\ , ", <, >, |, ], ..</code> , it will be stripped.</li>
       <li>
         If the resultant file name of your input becomes empty in an edge case, the save file will be <code>file_TIMESTAMP</code>, where <code>TIMESTAMP</code> captures the timestamp of which the save file is created.
@@ -604,7 +607,7 @@ file /load SAVE_FILE
 
 ### 📂 Listing Save Files: `file /list all`
 
-BetterCallTA stores all save files in `[JAR file location]/data/` 💾 and the `file /list all` command will list out all `.json` save files in that directory, as well as indicating the current save file that is being in use by the application as indicated by `(current save file)`.
+BetterCallTA stores all save files in `[JAR file location]/data/` and the `file /list all` command will list out all `.json` save files in that directory (without the file extension type), as well as indicating the current save file that is being in use by the application as indicated by `(current save file)`.
 
 
 **Format**
@@ -612,7 +615,7 @@ BetterCallTA stores all save files in `[JAR file location]/data/` 💾 and the `
 file /list all
 ```
 
-Lists out all the save files stored by the application.
+Lists out all the `.json` save file filenames (without the file extension type) stored by the application in the `/data/*` directory.
 
 **Examples**:
 - `file /list all`
@@ -634,7 +637,7 @@ clear
 <br> Fig 3.10 - Output of `file /list all`
 <br> * Actual output may be different depending on what files are in `[JAR file location]/data/`
 
-— 
+—
 
 ### Resetting All Attendance and Participation Records: `resetRecords`
 
