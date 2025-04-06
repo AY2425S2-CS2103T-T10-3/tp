@@ -26,12 +26,12 @@
 | `clear`             | Deletes all students.                                 | `clear`                                                                                                 |
 | `exit`              | Exits the application.                               | `exit`                                                                                                  |
 | `file /save`        | Saves data to a specified file.                         | `file /save CS2103T-T10-3`                                                                               |
-| `file /load`        | Loads data from a specified file.                         | `file /load CS2103T-T10-3`                                                                               |
-| `file /list all`    | Lists all available save files.                         | `file /list all`                                                                                       |
+| `file /load`        | Loads data from a specified file. (Without specifying the file extension)                        | `file /load CS2103T-T10-3`                                                                               |
+| `file /list all`    | Lists all available save files. (Without displaying the file extension)                        | `file /list all`                                                                                       |
 | `resetRecords`      | Resets attendance and participation records.            | `resetRecords`                                                                                        |
 | `help`              | Shows help message.                                  | `help`                                                                                                  |
 
-For more detailed documentation on the usage of commands in BetterCallTA, refer to our [User Guide](https://ay2425s2-cs2103t-t10-3.github.io/tp/UserGuide.html). 
+For more detailed documentation on the usage of commands in BetterCallTA, refer to our [User Guide](https://ay2425s2-cs2103t-t10-3.github.io/tp/UserGuide.html).
 
 ## Student Data
 
@@ -75,5 +75,3 @@ Each student's information includes:
 | NUS  | National University of Singapore                                          |
 
 For the complete User Guide, refer to the original documentation.
-
-
