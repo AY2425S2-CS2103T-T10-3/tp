@@ -38,9 +38,12 @@ public class FileCommand extends Command {
             %s FILE_PATH
             %s all
 
+            Note:
+            FILE_PATH is the name of the file to load or save, without the .json extension.
+
             Example:
-            file /load savefile1
-            file /save savefile2
+            file /load classA
+            file /save homeroomB
             file /list all
             """;
 

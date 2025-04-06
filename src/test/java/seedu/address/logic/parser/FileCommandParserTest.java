@@ -15,8 +15,8 @@ public class FileCommandParserTest {
 
     @Test
     public void parse_validArgs_returnsFileCommand() {
-        String args = " /load data.json";
-        FileCommand expectedFileCommand = new FileCommand(FileOperation.LOAD, "data.json");
+        String args = " /load data test";
+        FileCommand expectedFileCommand = new FileCommand(FileOperation.LOAD, "data_test");
         assertParseSuccess(parser, args, expectedFileCommand);
     }
 
@@ -53,30 +53,11 @@ public class FileCommandParserTest {
         assertParseFailure(parser, args, expected);
     }
 
-    @Test
-    public void parse_sanitizeFilePath_returnsFileCommand() {
-        String args = " /load ../data";
-        String args2 = " /save ../?*data";
-        String args3 = " /load aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-
-        FileCommand expectedFileCommand = new FileCommand(FileOperation.LOAD, "data");
-        FileCommand expectedFileCommand2 = new FileCommand(FileOperation.SAVE, "data");
-        FileCommand expectedFileCommand3 = new FileCommand(FileOperation.LOAD,
-                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-
-        assertParseSuccess(parser, args, expectedFileCommand);
-        assertParseSuccess(parser, args2, expectedFileCommand2);
-        assertParseSuccess(parser, args3, expectedFileCommand3);
+    @Test void parse_invalidFileName_throwsParseException() {
+        String args = " /save ../invalid.json";
+        assertParseFailure(
+                parser,
+                args,
+                "File operation failed: File name ../invalid.json cannot contain directory traversal characters");
     }
-
 }

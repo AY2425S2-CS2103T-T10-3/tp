@@ -533,7 +533,7 @@ list
 
 ---
 
-### Saving Contact Data: `file /save`
+### Saving Contact Data: `file /save FILENAME`
 
 BetterCallTA data is automatically saved to `addressbook.json` in `[JAR file location]/data/` by default unless the save file is modified with the `file /load` command.
 
@@ -555,13 +555,23 @@ file /save SAVE_FILE
       <li>
         You do NOT need to specify the <code>.json</code> file extension as it will automatically be added by our application. If you attempt to include the file extension type <code>SAVE_FILE</code>, such as <code>save.pdf</code>, it will be saved as <code>save.pdf.json</code>. This is NOT a bug as <code>.</code> is a valid character that can be used in the filename of the save file.
       </li>
-      <li>If the save file contains illegal characters, such as <code>[, /, :, *,? ,\ , ", <, >, |, ], ..</code> , it will be stripped.</li>
+      <li>
+        The following illegal characters are not allowed in <code>SAVE_FILE</code>. <code>[, /, :, *,? ,\ , ", <, >, |, ], ..</code>
+      <li>
+      <li>
+        Whitespaces will be stripped and replace with underscores (<code>_</code>).
       <li>
         If the resultant file name of your input becomes empty in an edge case, the save file will be <code>file_TIMESTAMP</code>, where <code>TIMESTAMP</code> captures the timestamp of which the save file is created.
       </li>
-      <li>If the save file contains whitespace characters, it will be replaced with an underscore (<code>_</code>).
-      <li>If <code>SAVE_FILE.json</code> already exists in the <code>data</code> directory, it will be overwritten.</li>
-      <li>It is recommended NOT to modify the saved <code>SAVE_FILE.json</code> directly as it may introduce unintended behaviour in the application.</li>
+      <li>
+        If the save file contains whitespace characters, it will be replaced with an underscore (<code>_</code>).
+      </li>
+      <li>
+        If <code>SAVE_FILE.json</code> already exists in the <code>data</code> directory, it will be overwritten.
+      </li>
+      <li>
+        It is recommended NOT to modify the saved <code>SAVE_FILE.json</code> directly as it may introduce unintended behaviour in the application.
+      </li>
     </ul>
 </div><br>
 
@@ -572,7 +582,7 @@ file /save SAVE_FILE
 
 ---
 
-### Loading Contact Data: `file /load`
+### Loading Contact Data: `file /load FILENAME`
 
 BetterCallTA data will load the most recent save file 💾 that was used in the application by default. Save files can be loaded with the `file /load` command.
 

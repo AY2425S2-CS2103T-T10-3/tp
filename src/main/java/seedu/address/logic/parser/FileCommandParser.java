@@ -5,9 +5,6 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_FILE_LIST;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_FILE_LOAD;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_FILE_SAVE;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 import seedu.address.logic.commands.FileCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 
@@ -34,14 +31,16 @@ public class FileCommandParser implements Parser<FileCommand> {
                 PREFIX_FILE_LIST);
 
         if (argMultimap.getValue(PREFIX_FILE_LOAD).isPresent()) { // Load command
-            return new FileCommand(
-                    FileCommand.FileOperation.LOAD,
-                    sanitizeFileName(argMultimap.getValue(PREFIX_FILE_LOAD).get()));
+            String fileName = stripFileName(argMultimap.getValue(PREFIX_FILE_LOAD).get());
+            checkIllegalFileName(fileName);
+            return new FileCommand(FileCommand.FileOperation.LOAD, fileName);
 
         } else if (argMultimap.getValue(PREFIX_FILE_SAVE).isPresent()) { // Save command
+            String fileName = stripFileName(argMultimap.getValue(PREFIX_FILE_SAVE).get());
+            checkIllegalFileName(fileName);
             return new FileCommand(
                     FileCommand.FileOperation.SAVE,
-                    sanitizeFileName(argMultimap.getValue(PREFIX_FILE_SAVE).get()));
+                    argMultimap.getValue(PREFIX_FILE_SAVE).get());
 
         } else if (argMultimap.getValue(PREFIX_FILE_LIST).isPresent()) { // List command
             return new FileCommand(
@@ -52,38 +51,38 @@ public class FileCommandParser implements Parser<FileCommand> {
     }
 
     /**
-     * Sanitizes the input file name to prevent directory traversal and invalid characters.
+     * Strips whitespaces from the file name to "_".
      *
-     * @param inputName The original file name to be sanitized, without the file extension.
-     * @return The sanitized file name, without the file extension
+     * @param fileName The input file name to be stripped.
+     * @return The stripped file name.
      */
-    private static String sanitizeFileName(String inputName) {
-        // Remove path separators and reserved characters
-        String sanitized = inputName.replaceAll("[\\\\/:*?\"<>|]", ""); // removes \ / : * ? " < > |
+    private String stripFileName(String fileName) {
+        return fileName.strip().replaceAll("\\s+", "_");
+    }
 
-        // Replace whitespace with underscores
-        sanitized = sanitized.replaceAll("\\s+", "_");
-
-        // Prevent directory traversal by removing any occurrences of ".."
-        sanitized = sanitized.replaceAll("\\.\\.+", "");
-
-        // Limit the length of the file name to 255 characters
-        int maxLength = 255;
-        if (sanitized.length() > maxLength) {
-            return sanitized.substring(0, maxLength);
+    /**
+     * Checks if the input file name contains illegal characters.
+     *
+     * @param inputName The input file name to check.
+     * @return true if the file name is valid, false otherwise.
+     */
+    private boolean checkIllegalFileName(String inputName) throws ParseException {
+        if (inputName.contains("..")) {
+            throw new ParseException(String.format(FileCommand.MESSAGE_ERROR,
+                    String.format("File name %s cannot contain directory traversal characters", inputName)));
+        } else if (inputName.isBlank()) {
+            throw new ParseException(String.format(FileCommand.MESSAGE_ERROR,
+                    "File name cannot be empty"));
+        } else if (inputName.length() > 255) {
+            throw new ParseException(String.format(FileCommand.MESSAGE_ERROR,
+                    String.format("File name %s is too long. Maximum length is 255 characters.", inputName)));
+        } else if (inputName.matches(".*[\\\\/:*?\"<>|].*")) {
+            throw new ParseException(String.format(FileCommand.MESSAGE_ERROR,
+                    String.format("File name %s contains illegal characters.", inputName)));
+        } else if (inputName.contains(" ")) {
+            throw new ParseException(String.format(FileCommand.MESSAGE_ERROR,
+                    String.format("File name %s cannot contain spaces.", inputName)));
         }
-
-        // edge case: if the sanitized name is empty, return a default name
-        if (sanitized.isBlank()) {
-            return String.format("file_%s",
-                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss")));
-        }
-
-        assert sanitized.length() <= maxLength : "Sanitized file name exceeds maximum length";
-        assert !sanitized.contains("..") : "Sanitized file name contains directory traversal characters";
-        assert !sanitized.matches(".*[\\\\/:*?\"<>|].*") : "Sanitized file name contains invalid characters";
-        assert !sanitized.isEmpty() : "Sanitized file name is empty";
-
-        return sanitized;
+        return true;
     }
 }
