@@ -13,7 +13,7 @@ activate MainWindow
 MainWindow -> Histogram : updateHistogram(gradeList, 10)
 activate Histogram
 
-Histogram -> Histogram : populateBins(gradeList, bins, 10, MAX_GRADE / 10)
+Histogram -> Histogram : populateBins(gradeList, bins, 10, 10)
 activate Histogram
 
 Histogram -> Histogram : bins
@@ -25,7 +25,7 @@ activate Histogram
 Histogram -> Histogram
 deactivate Histogram
 
-Histogram -> Histogram : addDataToSeries(bins, 10, MAX_GRADE / 10)
+Histogram -> Histogram : addDataToSeries(bins, 10, 10)
 activate Histogram
 
 Histogram -> Histogram : series
