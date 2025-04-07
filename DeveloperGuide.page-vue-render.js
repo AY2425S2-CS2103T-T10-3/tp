@@ -380,13 +380,13 @@ with(this){return _c('ol',[_c('li',[_v("Add a person from an empty save file")])
 with(this){return _c('ul',[_c('li',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("add /id A0000001R /name teststudent")])])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("Edit the person with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("/grade")]),_v(" flag with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("edit")]),_v(" command.")])])}
+with(this){return _c('ol',{attrs:{"start":"2"}},[_c('li',[_v("Edit the person with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("/grade")]),_v(" flag with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("edit")]),_v(" command.")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("edit /id A0000001R /grade 100")])]),_v(" "),_c('li',[_v("Expected: The histogram will be updated and will show 1 student under [90-100] in the histogram.")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("Delete the person")])])}
+with(this){return _c('ol',{attrs:{"start":"3"}},[_c('li',[_v("Delete the person")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("delete /id A0000001R")])]),_v(" "),_c('li',[_v("Expected: The histogram will be updated to become empty as there are no students in the list.")])])}
@@ -401,13 +401,13 @@ with(this){return _c('ol',[_c('li',[_v("Save the current list of students to a s
 with(this){return _c('ul',[_c('li',[_v("Test case "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("file /save CS2103T-T10")])]),_v(" "),_c('li',[_v("Expected: A file "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("CS2103T-T10.json")]),_v(" will be created in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("data/")]),_v(" directory.")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("Exit the application with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("exit")]),_v(" command.")])]),_v(" "),_c('li',[_c('p',[_v("Relaunch the application with "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("java -jar BetterCallTA.jar")]),_v(" from the command line terminal.")])])])}
+with(this){return _c('ol',{attrs:{"start":"2"}},[_c('li',[_c('p',[_v("Exit the application with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("exit")]),_v(" command.")])]),_v(" "),_c('li',[_c('p',[_v("Relaunch the application with "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("java -jar BetterCallTA.jar")]),_v(" from the command line terminal.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Expected: BetterCallTA will load successfully.")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("Load the application with the Load command.")])])}
+with(this){return _c('ol',{attrs:{"start":"4"}},[_c('li',[_v("Load the application with the Load command.")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Test Case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("file /load CS2103T-T10")])]),_v(" "),_c('li',[_v("Expected: The contents of "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("CS2103T-T10.json")]),_v(" will be loaded.")])])}
@@ -449,6 +449,6 @@ with(this){return _c('ol',{attrs:{"start":"5"}},[_c('li',[_v("Allow deletion of 
 with(this){return _c('ul',[_c('li',[_v("Currently, there are no means to delete a save file as saved with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("file /save SAVE_FILE")]),_v(" command. Users would need to manually delete the file on their local system if they wish to do so. In the future, we will introduce means to delete save files in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("data")]),_v(" directory.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 15:07:50 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 15:12:26 GMT+8]")])])])}
 }];
   
