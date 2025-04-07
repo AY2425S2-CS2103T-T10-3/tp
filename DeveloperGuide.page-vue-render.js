@@ -419,36 +419,36 @@ with(this){return _c('h2',{attrs:{"id":"appendix-planned-enhancements"}},[_c('st
 with(this){return _c('p',[_c('strong',[_v("Team Size : 5")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("Do additional error checking in the edge case whereby there are no data save files already in the "),_c('code',{pre:true},[_v("data")]),_v(" directory.")])])}
+with(this){return _c('p',[_c('strong',[_v("1. Do additional error checking in the edge case whereby there are no data save files already in the "),_c('code',{pre:true},[_v("data")]),_v(" directory.")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Currently, there will be no error message thrown if the "),_c('code',{pre:true},[_v("data")]),_v(" directory is empty, and the BetterCallTA will fail to load a save file until a user is added into the application. We plan to add a validation to ensure that a descriptive error message is shown to the user in this case as there is currently no feedback.")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',{attrs:{"start":"2"}},[_c('li',[_v("Add additional commands for adding, deleting, and clearing of individual notes.")])])}
+with(this){return _c('p',[_c('strong',[_v("2.  Add additional commands for adding, deleting, and clearing of individual notes.")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Currently, there is no easy method for individual notes belonging to a student to be edited, modified, and cleared. We plan to add an additional command for the management of student’s notes to be easier.")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',{attrs:{"start":"3"}},[_c('li',[_v("Command output box is too small")])])}
+with(this){return _c('p',[_c('strong',[_v("3. Command output box is too small")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Currently, the command output box is too small for certain error messages. We plan to allow users to increase the size of the output box to view more text to enhance user experience.")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',{attrs:{"start":"4"}},[_c('li',[_v("Detect when a flag is misspelled and display an error message for it.")])])}
+with(this){return _c('p',[_c('strong',[_v("4. Detect when a flag is misspelled and display an error message for it.")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Currently, there are no detailed error messages in the case that a user misspells a flag, such as mistyping "),_c('code',{pre:true},[_v("/attendance")]),_v(" as "),_c('code',{pre:true},[_v("/attendence")]),_v(". Adding more detailed error messages (instead of a more general error message in our latest iteration) would allow the user to narrow down the errors in their typed command, improving their CLI experience.")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',{attrs:{"start":"5"}},[_c('li',[_v("Allow deletion of save files from BetterCallTA")])])}
+with(this){return _c('p',[_c('strong',[_v("5. Allow deletion of save files from BetterCallTA")])])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Currently, there are no means to delete a save file as saved with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("file /save SAVE_FILE")]),_v(" command. Users would need to manually delete the file on their local system if they wish to do so. In the future, we will introduce means to delete save files in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("data")]),_v(" directory.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 15:16:46 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 15:18:06 GMT+8]")])])])}
 }];
   
