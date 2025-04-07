@@ -443,6 +443,6 @@ with(this){return _c('ol',{attrs:{"start":"4"}},[_c('li',[_v("Detect when a flag
 with(this){return _c('ul',[_c('li',[_v("Currently, there are no detailed error messages in the case that a user misspells a flag, such as mistyping "),_c('code',{pre:true},[_v("/attendance")]),_v(" as "),_c('code',{pre:true},[_v("/attendence")]),_v(". Adding more detailed error messages (instead of a more general error message in our latest iteration) would allow the user to narrow down the errors in their typed command, improving their CLI experience.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 12:55:50 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 13:01:55 GMT+8]")])])])}
 }];
   
