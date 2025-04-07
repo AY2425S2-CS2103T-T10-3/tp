@@ -347,7 +347,7 @@ with(this){return _c('ol',[_c('li',[_c('p',[_v("User requests to reset all atten
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. The student list is empty.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1a1. BetterCallTA shows the error message "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("No contacts to reset - the address book is empty.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_c('p',[_v("1b. All students' statuses are already unmarked (no changes needed).")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1b1. BetterCallTA shows the error message "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("No records to reset - all students' attendance and participation are already unmarked.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. The student list is empty.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1a1. BetterCallTA shows the error message specifying that the list is empty.")]),_v(" "),_c('p',[_v("Use case ends.")])])])]),_v(" "),_c('li',[_c('p',[_v("1b. All students' statuses are already unmarked (no changes needed).")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("1b1. BetterCallTA shows the error message that all students' status are already unmarked.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
 },function anonymous(
 ) {
 with(this){return _c('h3',{attrs:{"id":"non-functional-requirements"}},[_v("Non-Functional Requirements"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#non-functional-requirements","onclick":"event.stopPropagation()"}})])}
@@ -455,6 +455,6 @@ with(this){return _c('p',[_c('strong',[_v("5. Allow deletion of save files from 
 with(this){return _c('ul',[_c('li',[_v("Currently, there are no means to delete a save file as saved with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("file /save SAVE_FILE")]),_v(" command. Users would need to manually delete the file on their local system if they wish to do so. In the future, we will introduce means to delete save files in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("data")]),_v(" directory.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 23:20:02 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 23:24:06 GMT+8]")])])])}
 }];
   
