@@ -449,6 +449,6 @@ with(this){return _c('p',[_c('strong',[_v("5. Allow deletion of save files from 
 with(this){return _c('ul',[_c('li',[_v("Currently, there are no means to delete a save file as saved with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("file /save SAVE_FILE")]),_v(" command. Users would need to manually delete the file on their local system if they wish to do so. In the future, we will introduce means to delete save files in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("data")]),_v(" directory.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 16:09:36 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 16:35:39 GMT+8]")])])])}
 }];
   
