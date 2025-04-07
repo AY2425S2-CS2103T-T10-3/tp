@@ -1,6 +1,5 @@
 @startuml
 !include style.puml
-scale 1.5
 skinparam ArrowFontStyle plain
 
 Actor User as user USER_COLOR
