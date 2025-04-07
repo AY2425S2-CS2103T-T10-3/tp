@@ -60,7 +60,10 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-person": "Deleting a person"
+        "deleting-a-person": "Deleting a person",
+        "visualizing-grade-histogram": "Visualizing Grade Histogram.",
+        "save-and-load-from-a-save-file": "Save and Load from a Save File",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements"
       },
       "headingKeywords": {}
     },
