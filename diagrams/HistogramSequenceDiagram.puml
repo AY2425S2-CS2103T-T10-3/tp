@@ -1,0 +1,45 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":MainWindow" as MainWindow LOGIC_COLOR
+participant "histogram:Histogram" as Histogram LOGIC_COLOR
+end box
+
+[-> MainWindow : updateHistogramWithGrades()
+activate MainWindow
+
+MainWindow -> Histogram : updateHistogram(gradeList, 10)
+activate Histogram
+
+Histogram -> Histogram : populateBins(gradeList, bins, 10, MAX_GRADE / 10)
+activate Histogram
+
+Histogram -> Histogram : bins
+deactivate Histogram
+
+Histogram -> Histogram : setMaxFrequency(bins)
+activate Histogram
+
+Histogram -> Histogram
+deactivate Histogram
+
+Histogram -> Histogram : addDataToSeries(bins, 10, MAX_GRADE / 10)
+activate Histogram
+
+Histogram -> Histogram : series
+deactivate Histogram
+
+Histogram -> Histogram : refreshHistogram(series)
+activate Histogram
+
+Histogram -> Histogram
+deactivate Histogram
+
+Histogram --> MainWindow
+deactivate Histogram
+
+[<--MainWindow
+deactivate MainWindow
+@enduml
