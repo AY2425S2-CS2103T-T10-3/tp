@@ -1,0 +1,32 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle bold
+skinparam DefaultFontSize 20
+
+actor User
+
+box Logic LOGIC_COLOR_T1
+participant "Logic" as Logic LOGIC_COLOR
+participant "FileCommandParser" as Parser LOGIC_COLOR
+participant "FileCommand" as Command LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant "Model" as Model MODEL_COLOR
+end box
+
+box Storage STORAGE_COLOR_T1
+participant "JsonAddressBookStorage" as Storage STORAGE_COLOR
+end box
+
+User -> Logic: file /load classA
+Logic -> Parser: parse("file /load classA")
+Parser -> Command: new FileCommand(LOAD, "classA")
+Command -> Model: setAddressBookFilePath("data/classA.json")
+Command -> Storage: readAddressBook("data/classA.json")
+Storage --> Command: AddressBook data
+Command -> Model: resetData(AddressBook)
+Command --> Logic: CommandResult("Loaded data from save file.")
+Logic --> User: Display success message
+
+@enduml
