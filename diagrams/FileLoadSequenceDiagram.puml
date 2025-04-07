@@ -3,31 +3,80 @@
 skinparam ArrowFontStyle bold
 skinparam DefaultFontSize 20
 
-actor User
+actor User #FF5733
 
-box "Logic" LOGIC_COLOR_T1
-participant "Logic" as Logic LOGIC_COLOR
-participant "FileCommandParser" as Parser LOGIC_COLOR
-participant "FileCommand" as Command LOGIC_COLOR
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":FileCommandParser" as FileCommandParser LOGIC_COLOR
+participant ":FileCommand" as FileCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
 end box
 
-box "Model" MODEL_COLOR_T1
-participant "Model" as Model MODEL_COLOR
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
 end box
 
-box "Storage" STORAGE_COLOR_T1
-participant "JsonAddressBookStorage" as Storage STORAGE_COLOR
+box Storage STORAGE_COLOR_T1
+participant ":JsonAddressBookStorage" as Storage STORAGE_COLOR
 end box
 
-User -> Logic: execute("file /load SAVE_FILE")
-Logic -> Parser: parse("file /load SAVE_FILE")
-Parser -> Command: new FileCommand(LOAD, "SAVE_FILE")
-Command -> Model: setAddressBookFilePath("data/SAVE_FILE.json")
-Command -> Storage: readAddressBook("data/SAVE_FILE.json")
-Storage --> Command: AddressBook data
-Command -> Model: resetData(AddressBook)
-Model --> Command:
-Command --> Logic: CommandResult("Loaded data from save file.")
-Logic --> User: Display success message
+User -> LogicManager: execute("file /load SAVE_FILE")
+activate LogicManager
+
+LogicManager -> AddressBookParser: parseCommand("file /load SAVE_FILE")
+activate AddressBookParser
+
+create FileCommandParser
+AddressBookParser -> FileCommandParser: FileCommandParser()
+activate FileCommandParser
+
+FileCommandParser --> AddressBookParser
+deactivate FileCommandParser
+
+AddressBookParser -> FileCommandParser: parse("file /load SAVE_FILE")
+activate FileCommandParser
+
+create FileCommand
+FileCommandParser -> FileCommand: new FileCommand(LOAD, "SAVE_FILE")
+activate FileCommand
+FileCommand --> FileCommandParser
+deactivate FileCommand
+
+FileCommandParser --> AddressBookParser
+deactivate FileCommandParser
+
+AddressBookParser --> LogicManager: FileCommand
+deactivate AddressBookParser
+
+LogicManager -> FileCommand: execute(Model)
+activate FileCommand
+
+FileCommand -> Model: setAddressBookFilePath("data/SAVE_FILE.json")
+activate Model
+Model --> FileCommand
+deactivate Model
+
+FileCommand -> Storage: readAddressBook("data/SAVE_FILE.json")
+activate Storage
+Storage --> FileCommand: AddressBook data
+deactivate Storage
+
+FileCommand -> Model: resetData(AddressBook)
+activate Model
+Model --> FileCommand
+deactivate Model
+
+create CommandResult
+FileCommand -> CommandResult: CommandResult("Loaded data from save file.")
+activate CommandResult
+CommandResult --> FileCommand
+deactivate CommandResult
+
+FileCommand --> LogicManager: CommandResult
+deactivate FileCommand
+
+LogicManager --> User: Display success message
+deactivate LogicManager
 
 @enduml
