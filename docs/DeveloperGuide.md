@@ -34,6 +34,7 @@ The table of contents cover the sections in this Developer Guide.
   - [Visualizing Grade Histogram](#visualizing-grade-histogram)
   - [Save and Load from a Save File](#save-and-load-from-a-save-file)
 - [Appendix: Planned Enhancements](#appendix-planned-enhancements)
+- [Appendix: Effort](#appendix-effort)
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -812,3 +813,35 @@ This section contains Planned Enhancements of future enhancements for BetterCall
 * Currently, there are no means to delete a save file as saved with the `file /save SAVE_FILE` command. Users would need to manually delete the file on their local system if they wish to do so. In the future, we will introduce means to delete save files in the `data` directory.
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div> 
+
+## **Appendix: Effort**
+
+**Challenges**
+
+As a team, we did not initially realise the amount of work that the project would entail. Our proposed idea, to make an app that's suitable for TAs to use as a class management app, involved
+making many small changes to the original AB3 database that rippled out and had consequences in areas of the code that we had not even thought to involve initially. For example, adding the ability to import and export
+files was a uniquely challenging effort, especially when it came to handling potential data conflicts between files and parsing the commands properly. Moreover, dividing up the workload in a fair way without overloading 
+any single member was another issue that became apparent after realising that work which we had thought ot be more complex (such as changing the behaviour of the `find` command) ended up being more simple than expected, 
+and other problems (such as modifying the Argument Tokenizer) took precedence due to side effects. 
+
+**Achievements**
+
+For the most part, we managed to achieve almost all of our actual initial development targets, and every command you can interact with 
+was planned in advance. We believe that BetterCallTA is usable in its current state for the target audience, and for us that is a big achievement
+considering the problems we faced along the way, and especially near the end. 
+
+**Code Reuse**
+
+Much of AB3 has remained intact in our implementation of BetterCallTA, but crucially, our removal of tags (to better reflect the use of Student IDs)
+required heavy changes to the code, diagrams and test classes. Moreover, the addition of the other new attributes such as Participation, Grade, Notes etc. also marked
+a change in direction from the original code base which required us to come up with our own ideas. We primarily made use of existing Java and JavaFX libraries to help. 
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
